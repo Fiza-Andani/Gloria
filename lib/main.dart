@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gloria/pages/home_page.dart';
+import 'package:gloria/utils/routs.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gloria/pages/login_page.dart';
 
@@ -18,8 +19,8 @@ class gloria extends StatelessWidget {
       darkTheme: ThemeData(brightness: Brightness.dark),
       routes: {
         "/": (context) => Loginpage(),
-        "/home": (context) => HomePage(),
-        "/login": (context) => Loginpage(),
+        MyRouts.homeRout: (context) => HomePage(),
+        MyRouts.loginRout: (context) => Loginpage(),
       },
     );
   }
