@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:gloria/models/catelog.dart';
 import 'package:gloria/widgets/drawer.dart';
+import 'package:gloria/widgets/item_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -10,11 +12,13 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Gloria'),
       ),
-      body: Center(
-        child: Container(
-          child: Text('welcome'),
-        ),
-      ),
+      body: ListView.builder(
+          itemCount: catelogModel.items.length,
+          itemBuilder: (context, index) {
+            return ItemWidget(
+              item: catelogModel.items[index],
+            );
+          }),
       drawer: MyDrawer(),
     );
   }
