@@ -14,8 +14,15 @@ class gloria extends StatelessWidget {
     return MaterialApp(
       themeMode: ThemeMode.light,
       theme: ThemeData(
+          appBarTheme: const AppBarTheme(
+            //titleTextStyle: TextStyle(color: Colors.black),
+            color: Colors.white,
+            elevation: 0.0,
+            iconTheme: IconThemeData(color: Colors.black),
+          ),
           primarySwatch: Colors.deepPurple,
           fontFamily: GoogleFonts.lato().fontFamily),
+      debugShowCheckedModeBanner: false,
       darkTheme: ThemeData(brightness: Brightness.dark),
       routes: {
         "/": (context) => Loginpage(),
