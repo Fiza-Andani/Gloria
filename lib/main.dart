@@ -25,7 +25,7 @@ class gloria extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       darkTheme: ThemeData(brightness: Brightness.dark),
       routes: {
-        "/": (context) => Loginpage(),
+        "/": (context) => HomePage(),
         MyRouts.homeRout: (context) => HomePage(),
         MyRouts.loginRout: (context) => Loginpage(),
       },
